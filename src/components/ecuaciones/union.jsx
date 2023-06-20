@@ -1,3 +1,5 @@
+import ordenar from "./ordenar";
+
 function union (conjuntoA, conjuntoB) {
     const interseccionAB=new Array;
     for (let i = 0; i<conjuntoA.length;i++){
@@ -11,6 +13,7 @@ function union (conjuntoA, conjuntoB) {
             } 
         }
     }
-    return interseccionAB;
+    const ordenado = ordenar(interseccionAB)
+    return ordenado;
 }
 export default union;

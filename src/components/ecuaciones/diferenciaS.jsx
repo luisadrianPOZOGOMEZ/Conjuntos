@@ -1,3 +1,5 @@
+import ordenar from "./ordenar";
+
 function diferenciaS (conjuntoA, conjuntoB) {
     const interseccionA_B=new Array;
     for (let j = 0; j<conjuntoB.length;j++){
@@ -14,6 +16,7 @@ function diferenciaS (conjuntoA, conjuntoB) {
             }
         }
     }
-    return interseccionA_B;
+    const ordenado=ordenar(interseccionA_B)
+    return ordenado;
 }
 export default diferenciaS;

@@ -1,3 +1,5 @@
+import ordenar from "./ordenar";
+
 function interccion (conjuntoA, conjuntoB) {
     const interseccionAB=new Array;
     for (let i = 0; i<conjuntoA.length;i++){
@@ -9,6 +11,7 @@ function interccion (conjuntoA, conjuntoB) {
             }
         }
     }
-    return interseccionAB;
+    const ordenado=ordenar(interseccionAB);
+    return ordenado;
 }
 export default interccion;

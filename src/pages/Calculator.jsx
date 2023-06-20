@@ -1,46 +1,29 @@
 import Tittle from "../components/atoms/Tittle";
 import FormCalculator from "../components/organism/FormCalculator";
-import interccion from "../components/ecuaciones/interseccion";
-import union from "../components/ecuaciones/union";
-import diferencia from "../components/ecuaciones/diferencia";
-import diferencia2 from "../components/ecuaciones/diferencia2";
-import diferenciaS from "../components/ecuaciones/diferenciaS";
+import definir from "../components/ecuaciones/definir";
 import Navbar from "../components/atoms/Navbar";
 import Button from "../components/atoms/Button";
 import '../assets/styles/Calculator.css';
 
 function Calculator() {
     const obtnerConjuntos=()=>{
-        const patron=/[^\x2C0-9A-Za-z\xC0\xD6\xD8-\xF6\xF8-\xFF]/g;
         const datosA=document.getElementById("conjunto_a").value
         const datosB= document.getElementById('conjunto_b').value
         const seleccion = document.getElementById('operacion').value;
-        const correctoA= validar(datosA);
-        if (correctoA){
-            let correccion= datosA.replace(patron, '');
-            const conjuntoA=correccion.split(',');
-            const correctoB=validar(datosA);
-            if (correctoB){
-                correccion= datosB.replace(patron, '');
-                const conjuntoB=correccion.split(',');
-                if (seleccion=='interseccion'){
-                    const nuevoConjuntoI = interccion(conjuntoA, conjuntoB);
-                    document.getElementById('resultados').innerHTML=`{${nuevoConjuntoI}}`;
-                }else if (seleccion=='Union'){
-                    const nuevoconjuntoU = union(conjuntoA, conjuntoB);
-                    document.getElementById('resultados').innerHTML=`{${nuevoconjuntoU}}`;
-                }else if (seleccion=='Diferencia1'){
-                    const nuevoconjuntoD1 = diferencia(conjuntoA, conjuntoB);
-                    document.getElementById('resultados').innerHTML=`{${nuevoconjuntoD1}}`;
-                }else if (seleccion=='Diferencia2'){
-                    const nuevoconjuntoD2 = diferencia2(conjuntoA, conjuntoB);
-                    document.getElementById('resultados').innerHTML=`{${nuevoconjuntoD2}}`;
-                }else if (seleccion=='DiferenciaS'){
-                    const nuevoconjuntoDS = diferenciaS(conjuntoA, conjuntoB);
-                    document.getElementById('resultados').innerHTML=`{${nuevoconjuntoDS}}`;
-                }
-            } 
+        if (validar(datosA)){
+            const correccionA = filtro(datosA);
+            const conjuntoA=correccionA.split(',');
+            if (validar(datosB)){
+                const correccionB = filtro(datosB);
+                const conjuntoB=correccionB.split(',');
+                definir(seleccion, conjuntoA, conjuntoB);
+            }
         }
+    }
+    const filtro = (conjunto) =>{
+        const patron=/[^\x2C0-9A-Za-z\xC0\xD6\xD8-\xF6\xF8-\xFF]/g;
+        let correccion= conjunto.replace(patron, '');
+        return correccion;
     }
     const validar=(conjunto)=>{
         if (!conjunto.startsWith("{") || !conjunto.endsWith("}")) {
