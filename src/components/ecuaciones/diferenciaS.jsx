@@ -17,6 +17,6 @@ function diferenciaS (conjuntoA, conjuntoB) {
         }
     }
     const ordenado=ordenar(interseccionA_B)
-    return ordenado;
+    document.getElementById('resultados').innerHTML=`{${ordenado}}`;
 }
 export default diferenciaS;

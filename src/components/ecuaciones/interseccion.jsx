@@ -12,6 +12,6 @@ function interccion (conjuntoA, conjuntoB) {
         }
     }
     const ordenado=ordenar(interseccionAB);
-    return ordenado;
+    document.getElementById('resultados').innerHTML=`{${ordenado}}`;
 }
 export default interccion;
