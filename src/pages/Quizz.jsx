@@ -1,8 +1,12 @@
+import Navbar from "../components/atoms/Navbar";
+import FormQuizz from "../components/organism/FormQuizz";
+
 function Quizz() {
     return ( 
-        <div>
-            
-        </div>
+        <>
+            <Navbar></Navbar>
+            <FormQuizz></FormQuizz>
+        </>
      );
 }
 
