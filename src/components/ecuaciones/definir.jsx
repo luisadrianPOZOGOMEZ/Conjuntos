@@ -4,8 +4,12 @@ import diferencia from "./diferencia";
 import diferenciaS from "./diferenciaS";
 import productoCarteciano from "./productoCarteciano";
 import potencia from "./potencia";
+import crearConjunto from "./crearConjunto";
 
-function definir(seleccion, conjuntoA, conjuntoB, conjuntoU){
+function definir(seleccion, datosA, datosB, datosU){
+    const conjuntoA = crearConjunto(datosA);
+    const conjuntoB = crearConjunto(datosB);
+    const conjuntoU = crearConjunto(datosU);
     switch (seleccion){
         case 1:
             interccion(conjuntoA, conjuntoB);
@@ -47,10 +51,20 @@ function definir(seleccion, conjuntoA, conjuntoB, conjuntoU){
             potencia(conjuntoB);
             break;
         case 14:
-            document.getElementById('resultados').innerHTML=`${conjuntoA.length}`;
+            if (conjuntoA[0]==''){
+                document.getElementById('resultados').innerHTML=0;
+            }else{
+                const arregloSinRepetidos = [...new Set(conjuntoA)];
+                document.getElementById('resultados').innerHTML=`${arregloSinRepetidos.length}`;
+            }
             break;
         case 15:
-            document.getElementById('resultados').innerHTML=`${conjuntoB.length}`;
+            if (conjuntoB[0]==''){
+                document.getElementById('resultados').innerHTML=0;
+            }else{
+                const arregloSinRepetidos = [...new Set(conjuntoB)];
+                document.getElementById('resultados').innerHTML=`${arregloSinRepetidos.length}`;
+            }
             break;
     }
 }
