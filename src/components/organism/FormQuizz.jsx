@@ -19,8 +19,9 @@ function FormQuizz() {
           {answers1.map((value) => (
             <label key={value}>
               <input
+                className="input"
                 type="radio"
-                name="radio-group"
+                name="radio-group1"
                 onClick={handlerChange}
                 value={value}
               />
@@ -36,8 +37,9 @@ function FormQuizz() {
           {answers2.map((value) => (
             <label key={value}>
               <input
+                className="input"
                 type="radio"
-                name="radio-group"
+                name="radio-group2"
                 onClick={handlerChange}
                 value={value}
               />
@@ -53,8 +55,9 @@ function FormQuizz() {
           {answers3.map((value) => (
             <label key={value}>
               <input
+                className="input"
                 type="radio"
-                name="radio-group"
+                name="radio-group3"
                 onClick={handlerChange}
                 value={value}
               />
@@ -70,8 +73,9 @@ function FormQuizz() {
           {answers4.map((value) => (
             <label key={value}>
               <input
+                className="input"
                 type="radio"
-                name="radio-group"
+                name="radio-group4"
                 onClick={handlerChange}
                 value={value}
               />
@@ -87,8 +91,9 @@ function FormQuizz() {
           {answers5.map((value) => (
             <label key={value}>
               <input
+                className="input"
                 type="radio"
-                name="radio-group"
+                name="radio-group5"
                 onClick={handlerChange}
                 value={value}
               />
@@ -104,8 +109,9 @@ function FormQuizz() {
           {answers6.map((value) => (
             <label key={value}>
               <input
+                className="input"
                 type="radio"
-                name="radio-group"
+                name="radio-group6"
                 onClick={handlerChange}
                 value={value}
               />
@@ -121,8 +127,9 @@ function FormQuizz() {
           {answers7.map((value) => (
             <label key={value}>
               <input
+                className="input"
                 type="radio"
-                name="radio-group"
+                name="radio-group7"
                 onClick={handlerChange}
                 value={value}
               />
