@@ -7,7 +7,7 @@
     color: #b9b9b9;
 }
 
-input {display: none;}
+.input {display: none;}
 
 label {
     display: flex;
@@ -64,15 +64,15 @@ label {
     }
 }
 
-input:checked ~ .radio::before {
+.input:checked ~ .radio::before {
     animation: pulse 0.75s;
 }
 
-input:checked ~ span {
+.input:checked ~ span {
     border-color: #8f44fd;
 }
 
-input:checked ~ span > span {
+.input:checked ~ span > span {
     scale: 1;
     opacity: 1;
 }
