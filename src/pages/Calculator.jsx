@@ -54,7 +54,7 @@ function Calculator() {
                     </form>
                     <div className="WrapperForm">
                         <FormCalculator change={validarAutomatico}></FormCalculator>
-                        <Button type="button" handlerClick={realisarOperaciones} size={true} value="Calcular"/>
+                        <Button handlerClick={realisarOperaciones} type="button" size={true} value="Calcular"/>
                     </div>
                 </div>
                 <div className="div-2"> {/* este div es para mostrar el resultado*/}
