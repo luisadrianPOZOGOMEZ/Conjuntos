@@ -34,11 +34,13 @@ form{
 .label{
     text-align: center;
     font-family: 'Roboto';
+    color: #596A7C;
     height: 35%;
     font-size: 1.4rem;
 }
 
 .label-2{
+    color: #596A7C;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -60,16 +62,18 @@ form{
     position: relative; 
     left: 10%; 
     background: #F1F8FF;
+    color: #7A8795;
     border-radius: 8px;
     border: none;
 }
 
 .resultado{
-    background: #F1F8FF;
+    background: #DB3F59;
     height: 46%;
     width: 85%;
     font-family: 'Roboto';
     position: relative; 
     left: 46px; 
     font-size: 1rem;
+    color: black;
 }

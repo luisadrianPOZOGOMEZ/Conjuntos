@@ -1,15 +1,29 @@
-* {box-sizing: border-box;}
-
-.radio-buttons {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    color: #b9b9b9;
+* {
+    box-sizing: border-box;
 }
 
-.input {display: none;}
+.tituloquizz{
+    font-family: "Roboto";
+    display: flex;
+    justify-content: center;
+    color: #0e0b0b;
+    
+}
+
+.radio-buttons {
+    margin: 10px;
+    display: flex;
+    /* align-items: flex-start; */
+    flex-direction: column;
+    color: #0e0b0b;
+}
+
+.input {
+    display: none;
+}
 
 label {
+    font-family: 'Roboto';
     display: flex;
     gap: 10px;
     padding: 10px 20px 10px 0;
@@ -75,4 +89,9 @@ label {
 .input:checked ~ span > span {
     scale: 1;
     opacity: 1;
+}
+
+.resultadoq {
+    font-family: "Roboto";
+    font-size: 1rem;
 }
